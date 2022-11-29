@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> PORTFOLIO</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    </head>
+    <body>
+        <div class ="background">
+        <div class="nav">
+            <a class="a active" href="#">HOME</a>
+            <a class="b" href="#">AUTHOR</a>
+            <a class="c"href="#">GALLERY</a>
+            <a class="d" href="#">CONTACT US</a>
+        </div>
+        <div class="content">
+        <div class="home">
+            <h2> WALT DISNEY</h2>
+            <h3> CREATOR</h3>
+        </div>
+        <div class="AUTHOR">
+            <p>hello guys,<br>
+                Mickey Mouse is a cartoon character created in 1928 by The Walt Disney Company,<br> who also serves as the brand's mascot.<br>
+              An anthropomorphic mouse who typically weCreated as a replacement for a prior Disney character, Oswald the Lucky Rabbit, Mickey first appeared in the short Plane Crazy, debuting publicly in the short film Steamboat Willie (1928), one of the first sound cartoons. <br> 
+             He went on to appear in over 130 films <br>
+             Mickey appeared primarily in short films, but also occasionally in feature-length films.<br>
+              
+
+
+                Beginning in 1930, Mickey has also been featured extensively in comic strips and comic books. <br>
+                The Mickey Mouse comic strip, drawn primarily by Floyd Gottfredson, ran for 45 years.<br>
+                 Mickey has also appeared in comic books such as Mickey Mouse, Disney Italy's Topolino and MM – Mickey Mouse Mystery Magazine, and Wizards of Mickey. <br>
+                Mickey also features in television series such as The Mickey Mouse Club (1955–1996) and others. <br>
+          </p>
+        </div>
+        <div class="gallery">
+            <div class="image">
+                <img src="images/1.jfif"/>
+            </div>
+            <div class="image">
+                <img src="images/2.jfif"/>
+            </div>
+            <div class="image">
+                <img src="images/3.png"/>
+            </div>
+            
+            <div class="image">
+                <img src="images/4.jfif"/>
+            </div>
+            <div class="image">
+                <img src="images/5.jfif"/>
+            </div>
+            <div class="image">
+                <img src="images/6.jfif"/>
+            </div>
+            <div class="image">
+                <img src="images/7.jfif"/>
+            </div>
+            <div class="image">
+                <img src="images/8.png"/>
+            </div>
+            <div class="image">
+                <img src="images/9.jfif"/>
+            </div>
+        </div>
+            <div class="contactus">
+                <div class="contactform">
+                    
+                    <form action="index.html" method="post">
+                        <input type="text" name="" value="First Name">
+                        <input type="text" name="" value="Last Name">
+                        <input type="text" name="" value="Your Email">
+                        <textarea cols="4" rows="6"class="inputmessage"> Your Messages...!!!</textarea>
+                        <input type ="button" name="" value="Submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+      
+        
+            <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>"
+            <script type="text/javascript">
+            $(document).ready(function(){
+                $('a').click(function(){
+                    //alert("i am click");
+                    var selected = $(this);
+                    $('a').removeClass('active');
+                    $(selected).addClass('active');
+                });
+                var $a =$('.a'),
+                $b = $('.b'),
+                $c = $('.c'),
+                $d = $('.d'),
+                $home =$('.home'),
+                $AUTHOR =$('.AUTHOR'),
+                $gallery =$('.gallery'),
+                $contactus =$('.contactus');
+                $a.click(function(){
+                    $home.fadeIn();
+                    $AUTHOR.fadeOut();
+                    $gallery.fadeOut();
+                    $contactus.fadeOut();
+                });
+                $b.click(function(){
+                    $AUTHOR.fadeIn();
+                    $home.fadeOut();
+                    $gallery.fadeOut();
+                    $contactus.fadeOut();
+                });    
+                $c.click(function(){
+                    $gallery.fadeIn();
+                    $home.fadeOut();
+                    $AUTHOR.fadeOut();
+                    $contactus.fadeOut();
+                });
+                $d.click(function(){
+                    $contactus.fadeIn();
+                    $home.fadeOut();
+                    $AUTHOR.fadeOut();
+                    $gallery.fadeOut();
+                });
+                
+            });
+            </script>    
+        </body>
+</html>
